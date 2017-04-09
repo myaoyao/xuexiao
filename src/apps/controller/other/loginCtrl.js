@@ -11,6 +11,10 @@ function loginCtrl($scope,otherServer,session,$state,$stage) {
     $scope.KeepPwd=session.get("keepPwd")?true:false;
     $scope.userName=session.get("userName")?session.get("userName"):"";
     $scope.password=session.get("password")?session.get("password"):"";
+
+  /*  otherServer.addUser({},{userName:'zw',passWord:'123456',repeatPassWord:'123456'},function (d) {
+        debugger
+    })*/
     //登录
     var logining=false;
     $scope.loginGo = function () {
@@ -22,18 +26,12 @@ function loginCtrl($scope,otherServer,session,$state,$stage) {
         logining=true;
         $scope.text="登录中…"
         var authInfo = {
-            username: $scope.userName,
-            password: btoa($scope.password)
+            userName: $scope.userName,
+            passWord: $scope.password
+            //passWord: btoa($scope.password)
         };
 
-        var jwt = btoa(JSON.stringify(authInfo));
-
-        var getData = {
-            grant_type: "password",
-            jwt : jwt
-        };
-
-        otherServer.login(getData, {}, function (data) {
+        otherServer.login({}, authInfo, function (data) {
             if(data.scope!='admin'){
                 $scope.text="登录"
                 $scope.err="对不起，你没有权限!"

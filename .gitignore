@@ -1,10 +1,10 @@
-
-/.idea/
-
-/log/
-/yarn.lock
+.idea
 .DS_Store
 node_modules
 tmp
 libs
 build
+nohup.out
+npm-debug.log
+yarn-error.log
+yarn.lock

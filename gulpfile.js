@@ -41,10 +41,7 @@ var ICONS = ["src/assets/icon/**/*.svg"];
 var SERVER_PORT = 8089;
 
 //连接后端接口地址
-var SERVER_PROXY = "http://192.168.55.125:9000";//开发(默认连接开发环境，最好不要连接线上环境)
-// SERVER_PROXY = "http://192.168.55.119:9000";//测试1
-// SERVER_PROXY = "http://192.168.55.10:9000";//测试2
-// SERVER_PROXY = "http://bi.incitedata.cn:9000";//线上
+var SERVER_PROXY = "http://127.0.0.1:8888";//开发(默认连接开发环境，最好不要连接线上环境)
 
 
 var config = {

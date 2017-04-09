@@ -4,14 +4,14 @@
 var md = require("../module/other");
 md.factory('otherServer', ['$resource', function ($resource) {
     return $resource('rest/:param1/:param2/:param3/:param4/:param5', {}, {
-        test: {
+        addUser: {
             method: 'POST',
-            params: {param1: 'login'},
+            params: {param1: 'user',param2:'addUser'},
             isArray: false
         },
         login: {
-            method: 'GET',
-            params: {param1:'oauth2',param2:'access_token'},
+            method: 'POST',
+            params: {param1:'user',param2:'login'},
             isArray: false
         }
     })
