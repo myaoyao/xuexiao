@@ -1,0 +1,91 @@
+.indexCtrl
+    .contBox
+        .titleBox
+            img.pull-left(src="../../aioPublic/assets/images/user.png")
+            .txtCon.pull-left
+                span.title(ng-bind="loginTime?'欢迎回来，':'你好，'")
+                span.title.userName(ng-bind="user+'！'")
+                br
+                span(ng-show="loginTime") 上次登录时间：
+                span(ng-show="loginTime" ng-bind="loginTime | date:'yyyy-MM-dd HH:mm:ss'")
+
+        .mainCon
+            .itemCon.pull-left(ng-show="csShow")
+                .itemTitle#itbg1
+                    img.pull-left(src="../../aioPublic/assets/images/indexIcon1.png")
+                    p.title.pull-right 初筛任务
+                    br
+                .itemTxt
+                    span 本周已完成初筛任务：
+                    span.green(ng-bind="csFinish")
+                    br
+                    span 待处理初筛：
+                    span.green(ng-bind="csTodo")
+                    br
+                    span 近七日逾期初筛任务：
+                    span.red(ng-bind="csOverdue")
+            .itemCon.pull-left(ng-show="csshShow")
+                .itemTitle#itbg2
+                    img.pull-left(src="../../aioPublic/assets/images/indexIcon2.png")
+                    p.title.pull-right 初筛审核
+                    br
+                .itemTxt
+                    span 本周已完成初筛审核：
+                    span.green(ng-bind="csshFinish")
+                    br
+                    span 待处理审核：
+                    span.green(ng-bind="csshTodo")
+                    br
+                    span 近七日逾期初筛审核：
+                    span.red(ng-bind="csshOverdue")
+            .itemCon.pull-left(ng-show="fyShow")
+                .itemTitle#itbg3
+                    img.pull-left(src="../../aioPublic/assets/images/indexIcon3.png")
+                    p.title.pull-right 翻译任务
+                    br
+                .itemTxt
+                    span 本周已完成翻译任务：
+                    span.green(ng-bind="fyFinish")
+                    br
+                    span 待处理翻译：
+                    span.green(ng-bind="fyTodo")
+                    br
+                    span 近七日逾期翻译任务：
+                    span.red(ng-bind="fyOverdue")
+            .itemCon.pull-left(ng-show="xdShow")
+                .itemTitle#itbg4
+                    img.pull-left(src="../../aioPublic/assets/images/indexIcon4.png")
+                    p.title.pull-right 校对任务
+                    br
+                .itemTxt
+                    span 本周已完成校对任务：
+                    span.green(ng-bind="xdFinish")
+                    br
+                    span 待处理校对：
+                    span.green(ng-bind="xdTodo")
+                    br
+                    span 近七日逾期校对任务：
+                    span.red(ng-bind="xdOverdue")
+            .itemCon.pull-left(ng-show="zbShow")
+                .itemTitle#itbg5
+                    img.pull-left(src="../../aioPublic/assets/images/indexIcon5.png")
+                    p.title.pull-right 整编
+                    br
+                .itemTxt
+                    span 本周已完成整编：
+                    span.green(ng-bind="zbFinish")
+                    br
+                    span 待处理整编：
+                    span.green(ng-bind="zbTodo")
+                    br
+                    span 近七日逾期整编：
+                    span.red(ng-bind="zbOverdue")
+            .itemCon.pull-left
+                .itemTitle#itbg6
+                    img.pull-left(src="../../aioPublic/assets/images/indexIcon6.png")
+                    p.title.pull-right.long 新增重要文件
+                    br
+                .itemTxt
+                    span 本周新增重要文件：
+                    span.green(ng-bind="new")
+

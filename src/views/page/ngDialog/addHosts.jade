@@ -1,0 +1,87 @@
+.modal-header
+    button(type="button" ng-click="closeThisDialog()" class="close" data-dismiss="modal")
+        span(aria-hidden="true") ×
+    h4.modal-title 添加节点
+.modal-body.clear
+    p.noNode(ng-show="noNode")  没有可以添加的节点！
+    .role(ng-show="!onePage&&!noNode")
+        table
+            thead
+                tr
+                    th #
+                    th hostname
+                    th ip
+                    th cpu
+                    th 内存
+                    th 硬盘
+                    th 角色
+            tbody
+                tr(ng-repeat="item in hosts")
+                    td {{$index+1}}
+                    td(ng-bind="item.hostname")
+                    td(ng-bind="item.ipv4")
+                    td(ng-bind="item.cpu")
+                    td(ng-bind="item.memory | numreadable")
+                        span(ng-show="host.memory>0" ng-bind="host.memory | numreadable")
+                        span(ng-show="host.memory<1" ng-bind="0")
+                    td(ng-bind="item.disk | numreadable")
+                        span(ng-show="host.disk>0" ng-bind="host.disk | numreadable")
+                        span(ng-show="host.disk<1" ng-bind="0")
+                    td
+                        label
+                            input(type="checkbox" ng-model="item.isMaster")
+                            span 主节点
+                        label
+                            input(type="checkbox" ng-model="item.isStorage")
+                            span 存储节点
+                        label
+                            input(type="checkbox" ng-model="item.isCompute")
+                            span 计算节点
+                        label
+                            input(type="checkbox" ng-model="item.isClient")
+                            span 客户端
+                        label
+                            input(type="checkbox" ng-model="item.isHotStandby")
+                            span 热备节点
+                        label
+                            input(type="checkbox" ng-model="item.isETL")
+                            span ETL节点
+                        label
+                            input(type="checkbox" ng-model="item.isJobServer")
+                            span Job Server节点
+    .server(ng-show="onePage")
+        table
+            thead
+                tr
+                    td stageId
+                    td stageName
+                    td status
+                    td info
+            tbody
+                tr(ng-repeat="taskWithStage in workflow.taskWithStages track by $index"
+                ng-class="{'danger':taskWithStage.status == 'FAILED', 'success':taskWithStage.status == 'SUCCESS', 'info':taskWithStage.status == 'RUNNING'}")
+                    td(ng-bind="taskWithStage.stageId")
+                    td(ng-bind="taskWithStage.title")
+                    td(ng-bind="taskWithStage.status")
+                        button.btn.btn-delete.btn-xs(ng-show="taskWithStage.status == 'FAILED'" ng-click="retryRequest(taskWithStage)") 重试
+                    td
+                        ul
+                            li(ng-repeat="task in taskWithStage.tasks track by $index")
+                                .showDetail(ng-click="showDetail(task)")
+                                    span(ng-bind="task.hostname")
+                                    span.pull-right(ng-bind="task.status")
+                                ul(ng-show="task.showDetail")
+                                    li
+                                        span Command:
+                                        span(ng-bind="task.cmd")
+                                    li
+                                        span stdout:
+                                        span(ng-bind="task.stdout")
+                                    li
+                                        span stderr:
+                                        span(ng-bind="task.stderr")
+.modal-footer
+    button.btn.btn-success.btn-save(type="button"  ng-show="!noNode&&!onePage" ng-click="next()") 保存
+    button.btn.btn-success.btn-save(type="button" ng-show="onePage" ng-click="save()") 确定
+    button.btn.btn-state-close(type="button" ng-click="closeThisDialog()") 关闭
+

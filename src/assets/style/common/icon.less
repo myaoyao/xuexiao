@@ -1,0 +1,50 @@
+.icon-container {
+  text-align: center;
+  .demo-icon {
+    width: 10em;
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 1em;
+    text-align: center;
+    .icon {
+      font-size: 2em;
+    }
+    span {
+      display: block;
+      white-space: nowrap;
+    }
+  }
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+    width: 0;
+    height: 0;
+  }
+}
+
+//选项框
+.icon {
+  cursor: pointer;
+}
+
+.icon-checkbox-checked1, .icon-radio-checked {
+  color: @btnSuccess;
+}
+
+.icon-ic_five, .icon-ic_mail_open {
+  color: @borderColor;
+}
+
+.icon-ic_mail_open {
+  font-size: 1.15em;
+}
+
+.icon-ic_email {
+  color: @btnSuccess;
+}
+
+.icon-ic_paperclip {
+  color: #393939;
+}
+

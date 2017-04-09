@@ -1,0 +1,18 @@
+.loginHtml
+    .loginBox
+        p.logo
+            i.icon.icon-logo01
+        .group
+            i.icon.icon-user
+            input(max-input="50" type="text" ng-model="userName" placeholder="用户名或邮箱" ng-change="clearErr()")
+        .group
+            i.icon.icon-password
+            input(max-input="50" type="password" ng-model="password" placeholder="密码" ng-change="clearErr()")
+        .group
+            .saveWod
+                input(type="checkbox"  ng-model="KeepPwd")
+                a.savePwd(ng-click="choose()" ) 记住密码
+        .group
+            input(type="button" value="{{text}}" ng-click="loginGo()")
+        .group
+            p(ng-bind="err")

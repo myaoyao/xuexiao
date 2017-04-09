@@ -1,0 +1,11 @@
+.modal-header
+    button(type="button" ng-click="closeThisDialog()" class="close" data-dismiss="modal")
+        span(aria-hidden="true") ×
+    h4.modal-title 请填写审核不通过的理由
+.modal-body.clear
+    .group
+        textarea(style="width:100%" ng-model="unPassMessage" ng-focus="removeMassage()")
+.modal-footer
+    span(ng-bind="message" style="color:red")
+    i.btn.success(type="button" ng-click="unPass()") 确定
+    i.btn(type="button" ng-click="closeThisDialog()") 关闭

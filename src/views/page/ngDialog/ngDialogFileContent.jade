@@ -1,0 +1,6 @@
+//.modal-header
+    h4.modal-title(ng-bind="fileObj.name")
+.modal-body
+    button.close(type="button" ng-click="closeThisDialog()" class="close" data-dismiss="modal")
+        span(aria-hidden="true" ng-click="close()") ×
+    .contn(file-show="fileObj" translated="translated" hidden-head="hiddenHead")

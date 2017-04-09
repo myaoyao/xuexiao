@@ -1,0 +1,55 @@
+.adminBox.no-select
+    .navigation
+        .big
+            a.logo()
+                i.icon.icon-logo02
+
+            ul.menuOne()
+                li( ng-repeat="item in menu" ng-click="jump(item)" ng-if="item.data.name!='demo例子'" ng-class="{'active':item.active}")
+                    span(ng-i18next="{{item.data.name}}" )
+                    //span(ng-if="item.data.char.length")
+                        i.icon.icon-triangle-down(ng-if="!item.active")
+                        i.icon.icon-triangle-up(ng-if="item.active")
+            .navRight
+                .userBox(ng-class="{showTeme:showUserBoxKey}")
+                    img.clickBtn(ng-click="showUserBox()" src="aioPublic/assets/images/common/set.png")
+                    .popover-box
+                        .arrow
+                        .cursor-p
+                            p(ng-click="goResetPassword()" ng-i18next="重置密码")
+                            p(ng-click="changLg()" ng-i18next="切换英文")
+                            p(ng-click="goOut()" ng-i18next="退出")
+                //.themeBox(ng-class="{showTeme:showThemeKey}")
+                    img.clickBtn(ng-click="showTheme()" src="aioPublic/assets/images/common/theme.png")
+                    .popover-box
+                        .arrow
+                        .item.cursor-p(ng-repeat="item in themes" ng-class="{active:item.active}"
+                        style="background:{{item.color}}"
+                        ng-click="themeChange(item.name)") {{item.name}}
+                div 用户名:{{userName}}
+        //ul.subMenu.clear(ng-if="subMenu.length")
+            li(ng-repeat="obj in subMenu" ng-click="jumpSub(obj)" ng-class="{'active':obj.active}")
+                span.overflow(ng-bind="obj.data.name")
+    .phoneNavigation
+        a.logo()
+            i.icon.icon-logo02
+            ul.iconBar(ng-click="showPhoneNav()")
+                li
+                li
+                li
+        .phoneNavBox(ng-class="{show:PhoneNav}")
+            .navBox
+                ul
+                    li(ng-click="goToPage1()" ng-repeat="item in menu")
+                        span(ng-bind="item.data.name" ng-click="jump(item)" ng-class="{'active':item.active}")
+            .personalBox
+                ul
+                    //li
+                        img.clickBtn(ng-click="showTheme()" src="aioPublic/assets/images/common/theme.png")
+                    li
+                        p.name 用户名:{{userName}}
+                    li
+                        p.exit(ng-click="goOut()") 退出
+
+
+.twoRouting(ui-view="" ng-class="{noSubMenu:!subMenu.length}")

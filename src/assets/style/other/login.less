@@ -1,0 +1,103 @@
+.bigView {
+  height: 100%;
+  width: 100%;
+}
+
+.loginHtml {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: #f3f2f3;
+  position: relative;
+  .loginBox {
+
+    width: 340px;
+    position: absolute;
+    text-align: center;
+    margin-top: -278px;
+    margin-left: -170px;
+    top: 50%;
+    left: 50%;
+
+    .logo {
+      overflow: auto;
+      i {
+        display: block;
+        font-size: 60px;
+        color: @btnSuccess
+      }
+      a {
+        font-size: 35px;
+        color: @bgColor;
+        font-weight: bold;
+        position: relative;
+        top: -20px
+      }
+    }
+    .group {
+      padding: 10px 0;
+      position: relative;
+      overflow: auto;
+      i {
+        position: absolute;
+        left: 13px;
+        top: 20px;
+        font-size: 20px;
+        color: @borderColor;
+      }
+      input[type="text"], input[type="password"] {
+        width: 100%;
+        height: 48px;
+        border-radius: 5px;
+        border: 1px solid @borderColor;
+        padding-left: 40px;
+        &:focus {
+          border-color: @btnSuccess;
+        }
+      }
+      .saveWod {
+        float: left;
+        cursor: pointer;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        user-select: none;
+        input[type="checkbox"] {
+          width: 15px;
+          height: 15px;
+          outline: none;
+          border: 1px solid @borderColor;
+          position: relative;
+        }
+        a.savePwd {
+          padding-left: 5px;
+        }
+        a, input {
+          vertical-align: middle;
+        }
+      }
+      a.forget {
+        float: right;
+        color: @btnSuccess;
+        cursor: pointer;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        user-select: none;
+      }
+      input[type="button"] {
+        width: 100%;
+        height: 48px;
+        background-color: @btnSuccess;
+        border: none;
+        color: @white;
+        font-weight: bold;
+        border-radius: 5px;
+        &:hover {
+          background-color: darken(@btnSuccess, 5%);
+        }
+      }
+      p {
+        color: red;
+      }
+    }
+  }
+}

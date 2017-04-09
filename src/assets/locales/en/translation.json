@@ -1,0 +1,50 @@
+{
+  "common": {
+    "切换英文": "Chinese",
+    "退出": "Quit",
+    "重置密码": "Password",
+    "控制面板": "Dashboard",
+    "节点": "Node",
+    "服务": "Service",
+    "用户名": "User name"
+  },
+  "database":{
+    "数据表列表":"Data tables list",
+    "导入csv":"Import CSV",
+    "创建分析表":"Create analyze table",
+    "输入关键字":"Input key word",
+    "没有数据":"No data",
+    "选择":"Select",
+    "序号":"Serial number",
+    "数据库名":"Database name",
+    "表名":"Table name",
+    "操作":"Operation",
+    "查看表结构":"View table Structure",
+    "查看表数据":"View table data",
+    "删除":"Delete",
+    "列名":"Column name",
+    "类型":"Type",
+    "自增":"increment",
+    "可为空":"Nullable",
+    "描述":"Description",
+    "查询预览":"Query preview",
+    "创建表":"Create Table",
+    "添加表数据":"Add table data",
+    "请上传文件":"Please upload file:",
+    "点击选择文件":"Click to select file",
+    "预览数":"Preview sum",
+    "文章总数":"Total sum",
+    "保存":"Save",
+    "重命名":"Rename",
+    "显示":"Display",
+    "导入数据":"Import data",
+    "头像":"Portrait",
+    "名称和权限":"Name and permission",
+    "账号":"Account"
+  },
+  "hosts":{
+    "运行中":"state on",
+    "已停止":"Has stopped",
+    "删除":"delete"
+  }
+}

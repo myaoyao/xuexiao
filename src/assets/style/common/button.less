@@ -1,0 +1,127 @@
+.btn {
+  min-width: 75px;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 2px 12px 3px;
+  font-size: 14px;
+  color: #737373;
+  margin-right: 5px;
+  border: @border;
+  background-color: @white;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+  &.btn-md {
+    font-size: 12px;
+    border-radius: 3px;
+    padding: 2px 6px 3px;
+    min-width: 60px;
+  }
+  &.btn-primary {
+    border: 1px solid darken(@primary, 6%);
+    background: @primary;
+    color: @white;
+    &.no-bg {
+      color: @primary;
+    }
+  }
+  &.btn-warning {
+    border: 1px solid darken(@warning, 6%);
+    background: @warning;
+    color: @white;
+    &.no-bg {
+      color: @warning;
+    }
+  }
+  &.btn-info {
+    border: 1px solid darken(@info, 6%);
+    background: @info;
+    color: @white;
+    &.no-bg {
+      color: @info;
+    }
+  }
+  &.btn-success {
+    border: 1px solid darken(@success, 6%);
+    background: @success;
+    color: @white;
+    &.no-bg {
+      color: @success;
+    }
+  }
+  &.btn-danger {
+    border: 1px solid darken(@danger, 6%);
+    background: @danger;
+    color: @white;
+    &.no-bg {
+      color: @danger;
+    }
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+  &.disable, &:disabled {
+    border-color: @color-5;
+    background: @color-5;;
+    color: @color-4;
+    cursor: no-drop;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &.no-bg {
+    background: none;
+    &.disable, &:disabled {
+      color: @color-4;
+    }
+  }
+
+}
+
+.tag {
+  min-width: 50px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 2px 10px 0;
+  font-size: 10px;
+  color: #737373;
+  margin-right: 3px;
+  border: @border;
+  background-color: @white;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  &.btn-primary {
+    border: 1px solid @primary;
+    background: @primary;
+    color: @white;
+  }
+  &.btn-warning {
+    border: 1px solid @warning;
+    background: @warning;
+    color: @white;
+  }
+  &.btn-info {
+    border: 1px solid @info;
+    background: @info;
+    color: @white;
+  }
+  &.btn-success {
+    border: 1px solid @success;
+    background: @success;
+    color: @white;
+  }
+  &.btn-danger {
+    border: 1px solid @danger;
+    background: @danger;
+    color: @white;
+  }
+  &.no-bg {
+    background: none !important;
+  }
+}

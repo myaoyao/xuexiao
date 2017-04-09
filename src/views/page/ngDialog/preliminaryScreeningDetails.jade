@@ -1,0 +1,37 @@
+.modal-header
+    h4.modal-title 初筛详情页
+.modal-body.clear
+    nav
+        div.left
+            span 任务来源：
+            | {{data.source}}
+        div
+            span 文件名称：
+            | {{data.name}}
+        div.right
+            button.btn.green(ng-click="fullScreen($event)") {{!fullScreenState?"全屏":"还原"}}
+            button.btn.green(ng-click="closeThisDialog()") 取消
+            button.btn.green.last(ng-click="save()") 确定
+    div.container
+        .left 是否重要
+        .right
+            div.checkbox_group(ng-repeat='i in [1,2,3,4,5]' ng-click="changePriority(i)" )
+                span.icon(ng-class='{"icon-radio-checked":data.priority==i,"icon-radio-normal":!(data.priority==i)}')
+                span.text(ng-bind="i | numberChinese:'重要性'")
+            textarea(placeholder='请输入概要' ng-model='message')
+    div.container
+        .left 需翻译内容
+        .right
+            div(ng-repeat='desc in data.desc track by $index')
+                span.icon(ng-class='{"icon-checkbox-normal":!desc.trans,"icon-checkbox-checked1":desc.trans}' ng-click='descTrans($index)')
+                span {{desc.name}}
+    div.container
+        .left 正文
+        .right
+            textarea
+    div.container
+        .left 附件详情
+        .right
+            select(ng-repeat='desc in data.desc track by $index')
+                option {{desc.name}}
+            textarea

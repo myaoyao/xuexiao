@@ -1,0 +1,108 @@
+.context-menu {
+  width: 120px;
+  cursor: pointer;
+  background: @white;
+  color: @mainTextColor;
+  .ngdialog-close {
+    display: none;
+  }
+  ul, li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    background: @white;
+  }
+  ul {
+    box-shadow: 0 0 9px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    padding: 4px 0;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  .menuItem {
+    padding: 3px 10px 3px 0;
+    height: 30px;
+    width: 100%;
+    position: relative;
+    &:hover {
+      background: darken(@white, 20%);
+    }
+    div {
+      padding: 0 20px;
+      span {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .icon {
+      position: absolute;
+      top: 5px;
+      font-size: 12px;
+    }
+    .icon1 {
+      left: 5px;
+      color: @btnSuccess
+    }
+    .icon2 {
+      right: 5px;
+      color: lighten(@mainTextColor, 80%);
+    }
+
+  }
+  .active {
+    > .menuItem {
+      background: darken(@white, 20%)
+    }
+    > ul {
+      display: block;
+    }
+  }
+  li:hover {
+    > .menuItem {
+      background: darken(@white, 20%);
+      .icon-triangle-right {
+        transform: rotate(90deg)
+      }
+    }
+    > ul {
+      display: block;
+    }
+  }
+  .disable {
+    background: lighten(@white, 5%);;
+    cursor: not-allowed;
+  }
+  .disable:hover {
+    > .menuItem {
+      background: lighten(@white, 5%);
+      .icon-triangle-right {
+        transform: rotate(0deg)
+      }
+    }
+    > ul {
+      display: none;
+    }
+
+  }
+
+  .menu1 {
+    > li {
+      position: relative;
+    }
+  }
+  .menu2, .menu3 {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 120px;
+    right: -120px;
+    .menuItem {
+      padding-right: 5px;
+      .overflow {
+        width: 75px;
+      }
+    }
+  }
+}

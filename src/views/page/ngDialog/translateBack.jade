@@ -1,0 +1,11 @@
+.modal-header
+    button(type="button" ng-click="closeThisDialog()" class="close" data-dismiss="modal")
+        span(aria-hidden="true") ×
+    h4.modal-title 打回
+.modal-body.clear
+    .group
+        label 打回原因:
+        textarea.direName(type="text" maxlength="30" placeholder="请输入打回原因" ng-model="reason")
+.modal-footer
+    i.btn.success(type="button" ng-click="save()") 确定
+    i.btn(type="button" ng-click="closeThisDialog()") 关闭

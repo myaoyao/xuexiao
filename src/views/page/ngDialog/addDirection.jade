@@ -1,0 +1,11 @@
+.modal-header
+    button(type="button" ng-click="closeThisDialog()" class="close" data-dismiss="modal")
+        span(aria-hidden="true") ×
+    h4.modal-title 添加方向
+.modal-body.clear
+    .group
+        label 方向名称:
+        input.direName(type="text" maxlength="30" placeholder="请输入添加名称,字数小于30个字节" ng-model="directionName")
+.modal-footer
+    i.btn.success(type="button" ng-click="save()") 确定
+    i.btn(type="button" ng-click="closeThisDialog()") 关闭

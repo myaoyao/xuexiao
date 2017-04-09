@@ -1,0 +1,90 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid @borderColor;
+  th, td {
+    border: 1px solid @borderColor;
+    padding-left: 24px;
+    text-align: left;
+    word-break: break-all;
+    max-width: 400px;
+  }
+  tr {
+    height: 38px;
+  }
+  td {
+    min-width: 60px;
+  }
+  .w-30, .w-40, .w-50, .w-60, .w-70, .w-80, .w-90, .w-100, .w-110, .w-120,
+  .w-130, .w-140, .w-150, .w-160, .w-170, .w-250 {
+    text-align: center;
+    padding-left: 0;
+    min-width: inherit;
+  }
+  .w-30 {
+    width: 30px;
+  }
+  .w-40 {
+    width: 40px;
+  }
+  .w-50 {
+    width: 50px;
+  }
+  .w-60 {
+    width: 60px;
+  }
+  .w-70 {
+    width: 70px;
+  }
+  .w-80 {
+    width: 80px;
+  }
+  .w-90 {
+    width: 90px;
+  }
+  .w-100 {
+    width: 100px;
+  }
+  .w-110 {
+    width: 110px;
+  }
+  .w-120 {
+    width: 120px;
+  }
+  .w-130 {
+    width: 130px;
+  }
+  .w-140 {
+    width: 140px;
+  }
+  .w-150 {
+    width: 150px;
+  }
+  .w-160 {
+    width: 160px;
+  }
+  .w-250 {
+    width: 250px;
+  }
+
+  thead tr {
+    background-color: #f1f1f1;
+  }
+  tbody tr {
+    &:hover, &.active {
+      background-color: #fefbf3;
+    }
+  }
+}
+
+//.noData{
+//  height: 100%;
+//  //text-align: center;
+//  display: table;
+//  .error{
+//    display: table-cell;
+//    vertical-align: middle;
+//    i{color:@btnSuccess}
+//    span{font-size: 16px}
+//  }
+//}

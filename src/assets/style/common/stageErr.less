@@ -1,0 +1,24 @@
+.stageErr {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  margin-left: -150px;
+  padding: 10px 50px;
+  line-height: 16px;
+  text-align: center;
+  border-radius: 6px;
+  min-width: 300px;
+  background: @warning;
+  color: @white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  z-index: 1051;
+  &.warning {
+    background: @warning;
+  }
+  &.success {
+    background: @success;
+  }
+  &.danger {
+    background: @danger;
+  }
+}

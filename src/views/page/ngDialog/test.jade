@@ -1,0 +1,25 @@
+.modal-header
+    button(type="button" ng-click="closeThisDialog()" class="close" data-dismiss="modal")
+        span(aria-hidden="true" ng-click="close()") ×
+    h4.modal-title 颜色设置
+.modal-body.clear
+    .left
+        h5 数值轴
+        ul
+            li(ng-repeat='item in list' ng-class='{active:item.active}' class="overflow" ng-click="changeCol(item)")
+                b(style="background: {{item.color}}")
+                span(ng-bind="item.name")
+    .right
+        .sel-theme
+            span 配色方案
+            .select2(ng-model="themeList" name="activeTheme" key="'name'")
+            b 应用
+        ul.colorl.clear
+            li(ng-repeat='item in activeTheme.theme.color' ng-click="checkC(item)" style='background: {{item}}')
+                i.icon.icon-done( ng-show='item==activeCol.color')
+        //.sel-color
+            i
+            span 自定义颜色
+.modal-footer
+    button.btn.btn-success.btn-save(type="button" ng-click="save()") 确定
+    button.btn.btn-state-close(type="button" ng-click="closeThisDialog()") 关闭

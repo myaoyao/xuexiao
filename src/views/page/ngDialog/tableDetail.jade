@@ -1,0 +1,24 @@
+.TableDetail
+    .modal-header
+        button(type="button" ng-click="closeThisDialog('$closeButton')" class="close" data-dismiss="modal")
+            span(aria-hidden="true" ng-click="close()") ×
+        h3(ng-bind='fullTableName()')
+    .modal-body
+        .row
+            .col-md-12
+                .table-responsive
+                    table.table.table-small-font.table-bordered.table-striped(cellspacing="0")
+                        thead
+                            tr
+                                th(ng-i18next='列名')
+                                th(ng-i18next="类型")
+                                th(ng-i18next='自增')
+                                th(ng-i18next="可为空")
+                                th(ng-i18next='描述')
+                        tbody
+                            tr(ng-repeat="column in columns")
+                                td(ng-bind="column.columnName")
+                                td.type(ng-bind="column.dataType")
+                                td(ng-bind="column.isAutoincrement")
+                                td(ng-bind="column.isNullable")
+                                td(ng-bind="column.description")

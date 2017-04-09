@@ -1,0 +1,26 @@
+.TableInfo
+    .modal-header
+        button(type="button" ng-click="closeThisDialog('$closeButton')" class="close" data-dismiss="modal")
+            span(aria-hidden="true" ng-click="close()") ×
+        h3(ng-bind='tableName')
+    .modal-body
+        table.table(cellspacing="0" ng-show="!err")
+            thead
+                tr
+                    th(ng-i18next='numFiles')
+                    th(ng-i18next="rawDataSize")
+                    th(ng-i18next='sourcesProvider')
+                    th(ng-i18next="sourcesSchemaNumParts")
+                    th(ng-i18next='totalSize')
+                    th(ng-i18next='lastDdlTime')
+            tbody
+                tr
+                    td(ng-bind="result.numFiles")
+                    td(ng-bind="result.rawDataSize")
+                    td(ng-bind="result.sourcesProvider")
+                    td(ng-bind="result.sourcesSchemaNumParts")
+                    td(ng-bind="result.totalSize")
+                    td(ng-bind="result.lastDdlTime")
+        p.prompt(ng-show="err") 获取数据失败~
+
+

@@ -1,0 +1,9 @@
+.modal-header
+    button(type="button" ng-click="closeThisDialog()" class="close" data-dismiss="modal")
+        span(aria-hidden="true" ng-click="close()") ×
+    h4.modal-title 添加重要性描述
+.modal-body.clear
+    textarea(placeholder='请添加描述内容...' ng-model='message')
+.modal-footer
+    button.btn.bggreen(type="button" ng-click="save()") 确定
+    button.btn.green(type="button" ng-click="closeThisDialog()") 关闭

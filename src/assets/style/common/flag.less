@@ -1,0 +1,44 @@
+.flag-warning, .flag-primary, .flag-success, .flag-default,
+.flag-info, .flag-danger {
+  padding: 0 13px;
+  border-radius: 100px;
+  background: lighten(@black, 90%);
+  line-height: 1.5;
+  display: inline-block;
+}
+
+.flag-default {
+  background: @white;
+  border: 1px solid darken(@white, 20%);
+  color: lighten(@black, 40%);
+}
+
+.flag-warning {
+  background: @warning;
+  border: 1px solid darken(@warning, 1%);
+  color: @white;
+}
+
+.flag-primary {
+  background: @primary;
+  border: 1px solid darken(@primary, 1%);
+  color: @white;
+}
+
+.flag-success {
+  background: @success;
+  border: 1px solid darken(@success, 1%);
+  color: @white;
+}
+
+.flag-info {
+  background: @info;
+  border: 1px solid darken(@info, 1%);
+  color: @white;
+}
+
+.flag-danger {
+  background: @danger;
+  border: 1px solid darken(@danger, 1%);
+  color: @white;
+}

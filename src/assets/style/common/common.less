@@ -1,0 +1,182 @@
+*, :after, :before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+  background: @color-6;
+}
+
+body {
+  font-family: "微软雅黑", Helvetica, Arial, sans-serif;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0;
+  line-height: 1.42857143;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0
+}
+
+h1, h2, h3, h4, h5, h6, li, p {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal
+}
+
+a, b, i, img {
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block
+}
+
+i {
+  font-style: normal
+}
+
+textarea {
+  resize: none;
+}
+
+a, a:link, a:visited {
+  color: #666;
+  text-decoration: none
+}
+
+a {
+  color: @info;
+  cursor: pointer;
+  &:hover {
+    color: @success;
+  }
+}
+
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0
+}
+
+body {
+  color: @textColor;
+}
+
+.pull-right {
+  float: right !important
+}
+
+.pull-left {
+  float: left !important
+}
+
+.hide {
+  display: none
+}
+
+.show {
+  display: block
+}
+
+.clear {
+  overflow: auto;
+  zoom: 1;
+  clear: both
+}
+
+.clear2 {
+  clear: both
+}
+
+.clear:after, .clear2:after {
+  content: " ";
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  display: block;
+  clear: both
+}
+
+.overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.text-center {
+  text-align: center
+}
+
+.text-left {
+  text-align: left
+}
+
+.text-right {
+  text-align: right;
+}
+
+.cursorP {
+  cursor: pointer
+}
+
+.middle {
+  display: table;
+  > div {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.clickItem {
+  &:hover {
+    cursor: pointer;
+    color: @btnSuccess;
+  }
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#laydate_table tbody td {
+  font-family: Arial, "微软雅黑", Helvetica, sans-serif;
+}
+
+/* 公用的样式------------------------ */
+
+.size(@width,@height){
+  width: @width;
+  height:@height;
+}
+.pull-right{
+  float: right;
+}
+.pull-left{
+  float: left;
+}

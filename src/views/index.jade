@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+html(lang="en" ng-app="idcubeApp" )
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title NEO一体机管理平台
+        <!-- build:libCss aioPublic/assets/style/libStyle.css -->
+        link(rel="stylesheet" href="aioPublic/lib/ng-dialog/css/ngDialog.css")
+        link(rel="stylesheet" href="aioPublic/lib/ng-dialog/css/ngDialog-theme-default.css")
+        link(rel="stylesheet" href="aioPublic/lib/laydate/need/laydate.css")
+        link(rel="stylesheet" href="aioPublic/libs/sweetalert/dist/sweetalert.css")
+        <!-- endbuild -->
+        link(rel="stylesheet" href="aioPublic/assets/fonts/icon.css")
+        <!-- build:mainCss aioPublic/assets/style/mainCss.css -->
+        link(rel="stylesheet" id="theme" href="aioPublic/assets/style/style_default.css" + time)
+        <!-- endbuild -->
+
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    body(ng-controller="mainCtrl")
+        .bgPlugin1
+        .bigView(ui-view="")
+        <!-- build:libJs aioPublic/js/libJs.js -->
+        script(src="aioPublic/libs/jquery/jquery.min.js")
+        script(src="aioPublic/libs/angular/angular.min.js")
+        script(src="aioPublic/libs/angular-animate/angular-animate.min.js")
+        script(src="aioPublic/libs/angular-resource/angular-resource.min.js")
+        script(src="aioPublic/libs/angular-ui-router/release/angular-ui-router.min.js")
+        script(src="aioPublic/libs/sweetalert/dist/sweetalert.min.js")
+        script(src="aioPublic/libs/ngSweetAlert/SweetAlert.min.js")
+        script(src="aioPublic/libs/echarts/dist/echarts.js")
+
+        script(src="aioPublic/lib/paging/paging.js")
+        script(src="aioPublic/lib/ng-dialog/ngDialog.js")
+        script(src="aioPublic/lib/laydate/laydate.js")
+        script(src="aioPublic/lib/angular-upload/ng-file-upload-shim.min.js")
+        script(src="aioPublic/lib/angular-upload/ng-file-upload.min.js")
+        <!-- endbuild -->
+        <!-- build:mainJs aioPublic/js/mainJs.js -->
+        script(src="aioPublic/js/appMain.js" + time)
+        <!-- endbuild -->
+

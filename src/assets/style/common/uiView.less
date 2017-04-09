@@ -1,0 +1,64 @@
+/* 页面切换默认动画------------------------ */
+
+.ng-enter { z-index: 4; position: absolute; background: none; }
+.ng-leave { z-index: 4; position: absolute; background: none; }
+.ng-enter.bigView { animation: zoomInDown 0.5s both ease-in 0.2s; }
+.ng-leave.bigView { animation: zoomOutDown 0.5s both ease-in; }
+
+.ng-enter.minView {
+  animation: rotateInDownLeft 0.6s ease-out;
+}
+
+.ng-leave.minView {
+  animation: rotateOutDownRight 0.6s ease-in;
+}
+
+.ng-enter.twoRouting {
+  animation: bounceInRight 0.5s both ease-in 0.3s;
+}
+
+.ng-leave.twoRouting {
+  animation: bounceOutLeft 0.5s both ease-in;
+}
+
+
+/*
+.ng-enter.minView { animation: zoomIn 0.5s both ease-in 0.3s; }
+.ng-leave.minView { animation: zoomOut 0.5s both ease-in; }
+*/
+
+html, body, .bigView, .twoRouting, .minView {
+  overflow: hidden;
+}
+
+.bigView {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.twoRouting {
+  color: lighten(@black, 40%);
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  &.noSubMenu {
+    padding-top: 50px;
+  }
+
+}
+
+.minView {
+  width: 100%;
+  height: 100%;
+  background: contrast(@mainTextColor);
+  overflow-y: auto;
+}
+
+.bgPlugin1 {
+  width: 100%;
+  height: 100%;
+}
